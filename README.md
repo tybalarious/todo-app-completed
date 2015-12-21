@@ -1,2 +1,2 @@
 # ngBootSeed
-Angular Bootstrap Seed
+Angular Bootstrap Seed, with UI Router

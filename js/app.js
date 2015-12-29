@@ -4,7 +4,8 @@
     angular.module('basicApp', [
         "ui.router",
         "navController",
-        "basicController"
+        "homeController",
+        "homeService"
     ])
 
     .config(["$stateProvider", "$urlRouterProvider",
@@ -15,7 +16,7 @@
                 .state("home", {
                     url: "/home",
                     templateUrl: "templates/home.html",
-                    controller: "basicController as bc"
+                    controller: "homeController as hc"
                 })
                 .state("about", {
                     url: "/about",

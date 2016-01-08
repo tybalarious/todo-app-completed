@@ -5,7 +5,8 @@
         "ui.router",
         "navController",
         "homeController",
-        "homeService"
+        "homeService",
+        "homeDirectives"
     ])
 
     .config(["$stateProvider", "$urlRouterProvider",

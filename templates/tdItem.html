@@ -1,5 +1,5 @@
-    <td>{{ index }}</td>
+    <td>{{ tc.index }}</td>
     <td>
-        <label class="item-label" ng-class="{ 'completed-item': item.completed }">
-            <input type="checkbox" ng-model="item.completed"> {{ item.title }}</label>
+        <label class="item-label" ng-class="{ 'completed-item': tc.item.completed }">
+            <input type="checkbox" ng-model="tc.item.completed"> {{ tc.item.title }}</label>
     </td>

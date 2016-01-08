@@ -5,7 +5,8 @@
 
     .directive('tdNonefound', tdNonefound) // td-nonefound
     .directive('tdAddlistbutton', tdAddlistbutton) //td-addlistbutton
-    .directive('tdItem', tdItem);
+    .directive('tdItem', tdItem)
+    .controller('tdItemController', tdItemController);
 
     function tdNonefound() {
         return {
@@ -25,19 +26,20 @@
 
     function tdItem() {
         return {
+            scope: {}, // "isolate scope"
             restrict: 'A',
             templateUrl: 'templates/tdItem.html',
-            //template: `<td>{{ index }}</td>
-            //        <td>
-            //            <label class="item-label" ng-class="{ 'completed-item': item.completed }">
-            //                <input type="checkbox" ng-model="item.completed"> {{ item.title }}</label>
-            //        </td>`,
-            scope: {
-                item: '=',
+            bindToController: {
+                item: '=', // item and index parameters are passed straight in from HTML directive
                 index: '='
-            }
+            },
+            controller: 'tdItemController as tc'
         };
     }
 
+    function tdItemController() {
+        var tc = this;
+        tc.index++;
+    }
 
 }());

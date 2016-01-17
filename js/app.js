@@ -6,7 +6,9 @@
         "navController",
         "homeController",
         "homeService",
-        "homeDirectives"
+        "homeDirectives",
+        "ngAnimate",
+        "ngStorage"
     ])
 
     .config(["$stateProvider", "$urlRouterProvider",

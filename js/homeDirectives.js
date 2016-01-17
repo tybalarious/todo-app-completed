@@ -23,7 +23,6 @@
             template: '<button class="btn btn-xs btn-success" ng-click="hc.addList()">add list</button>'
         };
     }
-
     function tdItem() {
         return {
             scope: {}, // "isolate scope"
@@ -39,7 +38,7 @@
 
     function tdItemController() {
         var tc = this;
-        tc.index++;
+        //tc.index++;
     }
 
 }());
